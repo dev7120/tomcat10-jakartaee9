@@ -32,3 +32,12 @@ steps:
         PathtoPublish: '$(Build.ArtifactStagingDirectory)'
         ArtifactName: 'drop'
         publishLocation: 'Container'
+
+- task: UniversalPackages@0
+  inputs:
+        command: 'download'
+        downloadDirectory: '$(System.DefaultWorkingDirectory)'
+        feedsToUse: 'internal'
+        vstsFeed: 'a37401e1-35bb-47e7-af94-955a618d9093/2eb06276-c43d-4656-9e02-8690108e3390'
+        vstsFeedPackage: 'name'
+        vstsPackageVersion: '0.0.1'
