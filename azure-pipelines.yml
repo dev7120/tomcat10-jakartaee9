@@ -23,12 +23,6 @@ steps:
     sonarQubeRunAnalysis: false
     
 
-
-- task: UniversalPackages@0
+- task: MavenAuthenticate@0
   inputs:
-    command: 'publish'
-    publishDirectory: '$(Build.ArtifactStagingDirectory)'
-    feedsToUsePublish: 'internal'
-    vstsFeedPublish: 'a9be9efc-dbc7-435f-a598-dca03fb9974d'
-    vstsFeedPackagePublish: 'my - first-package'
-    versionOption: 'patch'
+    artifactsFeeds: 'devshrivastava1922'
