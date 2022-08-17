@@ -7,7 +7,8 @@
 trigger:
 - main
 
-pool: default
+pool:
+ vmimage: 'Ubuntu 18.04'
   
 
 steps:
